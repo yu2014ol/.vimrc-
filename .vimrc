@@ -3,7 +3,7 @@ set autoread
 set magic                       " For regular expressions turn magic on "
 set title                       " change the terminal's title "
 set nobackup                    " do not keep a backup file "                     
-set encoding=utf-8 				" set encoding
+set encoding=utf-8              " set encoding
 set termencoding=utf-8
 set ruler                       " show the current row and column "
 set number                      " show line numbers "
@@ -11,12 +11,12 @@ set showcmd                     " display incomplete commands "
 set showmode                    " display current modes "
 set showmatch                   " jump to matches when entering parentheses "
 set cursorline
-set mouse=a						" 启用鼠标
+set mouse=a                     " 启用鼠标
 set selection=exclusive
 set selectmode=mouse,key
-set ignorecase					" 搜索忽略大小写
-set completeopt=preview,menu	" 代码补全 
-set completeopt=longest,menu	" 打开文件类型检测, 加了这句才可以用智能补全
+set ignorecase                  " 搜索忽略大小写
+set completeopt=preview,menu    " 代码补全 
+set completeopt=longest,menu    " 打开文件类型检测, 加了这句才可以用智能补全
 
 set shiftwidth=2
 set tabstop=2
@@ -32,27 +32,27 @@ colorscheme molokai
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""按键映射配置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-noremap <C-a> ggVG 			" Ctrl-a 全选
-inoremap <C-a> <Esc>ggVG	" Ctrl-a 全选
-noremap <C-x> "+x 			" Ctrl-x 剪贴
-inoremap <C-x> <Esc>"+x 	" Ctrl-x 剪贴
-noremap <S-v> <C-v>
-noremap <C-z> u				" Ctrl-z 撤销
+noremap <C-a> ggVG          " Ctrl-a 全选
+inoremap <C-a> <Esc>ggVG    " Ctrl-a 全选
+noremap <C-x> "+x           " Ctrl-x 剪贴
+inoremap <C-x> <Esc>"+x     " Ctrl-x 剪贴
+noremap <C-b> <C-v>         " Ctrl-b 块选择
+noremap <C-z> u             " Ctrl-z 撤销
 " Ctrl-z 撤销 注意i后面不能有其他内容
 inoremap <C-z> <Esc>ui
-noremap <C-v> "+P			" Ctrl-v 粘贴
+noremap <C-v> "+P           " Ctrl-v 粘贴
 " Ctrl-v 粘贴 注意i后面不能有其他内容
-inoremap <C-v> <Esc>"+pi	
-noremap <C-c> "+y 			" Crtl-c 复制	
+inoremap <C-v> <Esc>"+pi    
+noremap <C-c> "+y           " Crtl-c 复制 
 " Crtl-c 复制 注意i后面不能有其他内容
-inoremap <C-c> <Esc>"+yi 			
+inoremap <C-c> <Esc>"+yi            
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""文件类型设置
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-filetype on						" 侦测文件类型
-filetype plugin on				" 载入文件类型插件
-filetype indent on				" 为特定文件类型载入相关缩进文件
+filetype on                     " 侦测文件类型
+filetype plugin on              " 载入文件类型插件
+filetype indent on              " 为特定文件类型载入相关缩进文件
 
 autocmd FileType python set tabstop=4 shiftwidth=4 expandtab ai
 autocmd FileType ruby set tabstop=2 shiftwidth=2 softtabstop=2 expandtab ai
