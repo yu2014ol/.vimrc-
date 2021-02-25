@@ -23,12 +23,6 @@ set tabstop=2
 set autoindent smartindent shiftround 
 
 
-" 代码颜色主题
-syntax on
-syntax enable
-set t_Co=256
-colorscheme molokai
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""按键映射配置（会报错，但是能用...）
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -97,12 +91,13 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
 \| endif
 
-" youcompleteme寻找全局配置文件，该插件非常难安装（网络原因）
-let g:ycm_global_ycm_extra_conf='~/.vim/plugged/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
+
 """"""""""""""""""""插件将下载到指定目录下
 call plug#begin('~/.vim/plugged')
 " 在这里声明插件
-Plug 'ycm-core/YouCompleteMe'
+" 为了最佳补全，要安装相应的插件coc-clangd（需要先安装clangd）
+" coc-pyright(python3)，参阅https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'jiangmiao/auto-pairs'
 """"""""""""""""""""列表到此结束。 调用后，插件对Vim可见
 call plug#end()
