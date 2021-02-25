@@ -30,7 +30,7 @@ set t_Co=256
 colorscheme molokai
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""""按键映射配置
+"""""按键映射配置（会报错，但是能用...）
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 noremap <C-a> ggVG          " Ctrl-a 全选
 inoremap <C-a> <Esc>ggVG    " Ctrl-a 全选
@@ -97,7 +97,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
 \| endif
 
-" youcompleteme寻找全局配置文件,
+" youcompleteme寻找全局配置文件，该插件非常难安装（网络原因）
 let g:ycm_global_ycm_extra_conf='~/.vim/plugged/YouCompleteMe/third_party/ycmd/.ycm_extra_conf.py'
 """"""""""""""""""""插件将下载到指定目录下
 call plug#begin('~/.vim/plugged')
