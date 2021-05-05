@@ -120,7 +120,9 @@ call plug#begin('~/.vim/plugged')
 "         2. sudo apt update 
 "         2. sudo apt install vim 
 " 为了最佳补全，要安装相应的插件coc-clangd（需要先安装clangd）
-" 安装clang: sudo apt-get install -y clang 
+" 安装clang: 
+"         1. sudo apt-get install clangd-10
+"         1. sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-10 100
 " 安装coc-clangd: vim命令模式下，:CocInstall coc-clangd
 " 安装coc-clangd: vim命令模式下，:CocInstall coc-pyright(python3)
 " 安装coc-pairs（括号自动配对）: vim命令模式下，:CocInstall coc-pairs
