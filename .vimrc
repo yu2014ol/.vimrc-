@@ -113,15 +113,16 @@ call plug#begin('~/.vim/plugged')
 " coc.nvim是补全，需要安装nodejs，需要安装build-essential，需要较新版本vim
 " 安装nodejs: 
 "         1. curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash
-"         2. sudo apt-get install -y nodejs
+"         2. sudo apt install -y nodejs
 " 安装build-essential: sudo apt-get install -y build-essential
 " 升级vim: 
 "         1. sudo add-apt-repository ppa:jonathonf/vim 
 "         2. sudo apt update 
-"         2. sudo apt install vim 
+"         3. sudo apt upgrade 
+"         4. sudo apt install vim 
 " 为了最佳补全，要安装相应的插件coc-clangd（需要先安装clangd）
 " 安装clang: 
-"         1. sudo apt-get install clangd-10
+"         1. sudo apt install clangd-10
 "         1. sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-10 100
 " 安装coc-clangd: vim命令模式下，:CocInstall coc-clangd
 " 安装coc-clangd: vim命令模式下，:CocInstall coc-pyright(python3)
