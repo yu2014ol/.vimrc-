@@ -125,9 +125,8 @@ call plug#begin('~/.vim/plugged')
 "         1. sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-10 100
 " 安装coc-clangd: vim命令模式下，:CocInstall coc-clangd
 " 安装coc-clangd: vim命令模式下，:CocInstall coc-pyright(python3)
-" 安装coc-pairs（括号自动配对）: vim命令模式下，:CocInstall coc-pairs
 " 参阅https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
+Plug 'jiangmiao/auto-pairs'
 """"""""""""""""""""列表到此结束。 调用后，插件对Vim可见
 call plug#end()
