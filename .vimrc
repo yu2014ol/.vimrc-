@@ -18,6 +18,11 @@ set ignorecase                  " 搜索忽略大小写
 set completeopt=preview,menu    " 代码补全 
 set completeopt=longest,menu    " 打开文件类型检测, 加了这句才可以用智能补全
 
+syntax on                       " 语法高亮
+set t_Co=256                    " 支持 256 色模式
+set langmenu=zn_CN.UTF-8        " 设置语言
+set helplang=cn                
+
 set shiftwidth=2
 set tabstop=2
 set autoindent smartindent shiftround 
