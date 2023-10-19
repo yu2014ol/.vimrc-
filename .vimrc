@@ -4,7 +4,7 @@ set termencoding=utf-8
 set ruler                       " 显示光标位置 "
 set showcmd                     " 命令模式下，在底部显示键入指令 " 
 set showmode                    " 显示当前模式 "
-set relativenumber number       " 显示相对行数,绝对行数 "
+set number       " 显示绝对行数 "
 set mouse=a                     " 启用鼠标 "
 set selection=exclusive         " 启用鼠标 "
 set selectmode=mouse,key        " 启用鼠标 "
