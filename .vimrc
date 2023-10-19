@@ -11,9 +11,14 @@ set selection=exclusive         " 启用鼠标 "
 set selectmode=mouse,key        " 启用鼠标 "
 set clipboard=unnamed           " 使用p就能粘贴从外部程序复制的文本(将匿名寄存器和系统剪贴板关联起来) "
 set ignorecase                  " 搜索忽略大小写 "
+set smartcase		            " 如果同时打开了ignorecase，那么对于只有一个大写字母的搜索词，将大小写敏感；其他情况都是大小写不敏感 "
+set wildmenu                    " 命令模式下，底部操作指令按下 Tab 键自动补全 "
 set completeopt=preview,menu    " 代码补全 "
 set completeopt=longest,menu    " 打开文件类型检测, 加了这句才可以用智能补全 "
-set incsearch                   " 激活增量查找 "
+set incsearch                   " 边输入查找内容边高亮 "
+set hlsearch                    " 搜索高亮 "
+exec "nohlsearch"		        " 解决打开一个新文件还在高亮之前的搜索内容的问题
+set scrolloff=5                " 光标上下移动时，保持与下边界5行的距离
 
 syntax on                       " 语法高亮 "
 set t_Co=256                    " 支持 256 色模式 "
@@ -24,10 +29,11 @@ set foldenable
 set foldmethod=syntax           " 启用语法折叠 "
 
 set shiftwidth=4
-set shiftround                  " 缩进列数对齐到 shiftwidth 值的整数倍
-set smartindent                 " 智能缩进
+set shiftround                  " 缩进列数对齐到 shiftwidth 值的整数倍 "
+set autoindent smartindent      " 缩进 "
+set wrap                        " 不会使文本超出当前窗口的宽度，自动调整文本宽度 "
 set tabstop=4
-" set expandtab                 " Makefile不能用空格替换tab，故注释掉该行
+set expandtab                   " Makefile不能用空格替换tab，使用时需注意 "
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""文件类型设置
