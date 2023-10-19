@@ -1,10 +1,11 @@
+set nocompatible                " 关闭兼容Vi,避免不必要的麻烦
 set autoread                    " 硬盘文件变化后，自动读取 "
 set encoding=utf-8              
 set termencoding=utf-8
 set ruler                       " 显示光标位置 "
 set showcmd                     " 命令模式下，在底部显示键入指令 " 
 set showmode                    " 显示当前模式 "
-set number       " 显示绝对行数 "
+set number                      " 显示绝对行数 "
 set mouse=a                     " 启用鼠标 "
 set selection=exclusive         " 启用鼠标 "
 set selectmode=mouse,key        " 启用鼠标 "
@@ -18,6 +19,9 @@ syntax on                       " 语法高亮 "
 set t_Co=256                    " 支持 256 色模式 "
 set langmenu=zn_CN.UTF-8        " 设置语言 "
 set helplang=cn                
+
+set foldenable                  
+set foldmethod=syntax           " 启用语法折叠 "
 
 set shiftwidth=4
 set shiftround                  " 缩进列数对齐到 shiftwidth 值的整数倍
