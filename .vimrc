@@ -17,8 +17,7 @@ set completeopt=preview,menu    " 代码补全 "
 set completeopt=longest,menu    " 打开文件类型检测, 加了这句才可以用智能补全 "
 set incsearch                   " 边输入查找内容边高亮 "
 set hlsearch                    " 搜索高亮 "
-exec "nohlsearch"		        " 解决打开一个新文件还在高亮之前的搜索内容的问题
-set scrolloff=5                " 光标上下移动时，保持与下边界5行的距离
+set scrolloff=5                 " 光标上下移动时，保持与下边界5行的距离 "
 
 syntax on                       " 语法高亮 "
 set t_Co=256                    " 支持 256 色模式 "
