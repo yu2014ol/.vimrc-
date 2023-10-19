@@ -1,52 +1,29 @@
-set nocompatible                " don't bother with vi compatibility "
-set autoread
-set magic                       " For regular expressions turn magic on "
-set title                       " change the terminal's title "
-set nobackup                    " do not keep a backup file "                     
-set encoding=utf-8              " set encoding
+set autoread                    " 硬盘文件变化后，自动读取 "
+set encoding=utf-8              
 set termencoding=utf-8
-set ruler                       " show the current row and column "
-set number                      " show line numbers "
-set showcmd                     " display incomplete commands " 
-set showmode                    " display current modes "
-set showmatch                   " jump to matches when entering parentheses "
-set cursorline
-set mouse=a                     " 启用鼠标
-set selection=exclusive
-set selectmode=mouse,key
-set clipboard=unnamed           " 使用p就能粘贴从外部程序复制的文本(将匿名寄存器和系统剪贴板关联起来)
-set ignorecase                  " 搜索忽略大小写
-set completeopt=preview,menu    " 代码补全 
-set completeopt=longest,menu    " 打开文件类型检测, 加了这句才可以用智能补全
-set incsearch                   " 激活增量查找
+set ruler                       " 显示光标位置 "
+set showcmd                     " 命令模式下，在底部显示键入指令 " 
+set showmode                    " 显示当前模式 "
+set relativenumber number       " 显示相对行数,绝对行数 "
+set mouse=a                     " 启用鼠标 "
+set selection=exclusive         " 启用鼠标 "
+set selectmode=mouse,key        " 启用鼠标 "
+set clipboard=unnamed           " 使用p就能粘贴从外部程序复制的文本(将匿名寄存器和系统剪贴板关联起来) "
+set ignorecase                  " 搜索忽略大小写 "
+set completeopt=preview,menu    " 代码补全 "
+set completeopt=longest,menu    " 打开文件类型检测, 加了这句才可以用智能补全 "
+set incsearch                   " 激活增量查找 "
 
-syntax on                       " 语法高亮
-set t_Co=256                    " 支持 256 色模式
-set langmenu=zn_CN.UTF-8        " 设置语言
+syntax on                       " 语法高亮 "
+set t_Co=256                    " 支持 256 色模式 "
+set langmenu=zn_CN.UTF-8        " 设置语言 "
 set helplang=cn                
 
-set shiftwidth=2
-set tabstop=2
-set autoindent smartindent shiftround 
+set shiftwidth=4
+set shiftround                  " 缩进列数对齐到 shiftwidth 值的整数倍
+set smartindent                 " 智能缩进
+set tabstop=4
 " set expandtab                 " Makefile不能用空格替换tab，故注释掉该行
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"""""按键映射配置（会报错，但是能用...）
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-noremap <C-a> ggVG          " Ctrl-a 全选
-inoremap <C-a> <Esc>ggVG    " Ctrl-a 全选
-noremap <C-x> "+x           " Ctrl-x 剪贴
-inoremap <C-x> <Esc>"+x     " Ctrl-x 剪贴
-noremap <C-b> <C-v>         " Ctrl-b 块选择
-noremap <C-z> u             " Ctrl-z 撤销
-" Ctrl-z 撤销 注意i后面不能有其他内容
-inoremap <C-z> <Esc>ui
-noremap <C-v> "+P           " Ctrl-v 粘贴
-" Ctrl-v 粘贴 注意i后面不能有其他内容
-inoremap <C-v> <Esc>"+pi    
-noremap <C-c> "+y           " Crtl-c 复制 
-" Crtl-c 复制 注意i后面不能有其他内容
-inoremap <C-c> <Esc>"+yi            
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""文件类型设置
@@ -83,7 +60,6 @@ fun! <SID>StripTrailingWhitespaces()
     %s/\s\+$//e     
     call cursor(l, c)
 endfun
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """""插件相关，需先安装vim-plug
