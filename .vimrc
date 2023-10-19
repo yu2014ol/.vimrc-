@@ -14,6 +14,7 @@ set cursorline
 set mouse=a                     " 启用鼠标
 set selection=exclusive
 set selectmode=mouse,key
+set clipboard=unnamed           " 使用p就能粘贴从外部程序复制的文本(将匿名寄存器和系统剪贴板关联起来)
 set ignorecase                  " 搜索忽略大小写
 set completeopt=preview,menu    " 代码补全 
 set completeopt=longest,menu    " 打开文件类型检测, 加了这句才可以用智能补全
