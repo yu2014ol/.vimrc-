@@ -18,6 +18,7 @@ set clipboard=unnamed           " 使用p就能粘贴从外部程序复制的文
 set ignorecase                  " 搜索忽略大小写
 set completeopt=preview,menu    " 代码补全 
 set completeopt=longest,menu    " 打开文件类型检测, 加了这句才可以用智能补全
+set incsearch                   " 激活增量查找
 
 syntax on                       " 语法高亮
 set t_Co=256                    " 支持 256 色模式
